@@ -1,10 +1,12 @@
-const header_text=document.querySelector('.header-text')
-console.log(header_text)
+import typeWriter from "./typewriter.js";
+const cityname=document.querySelector('.cityname')
+const typewriter_cursor1=document.querySelector('.typewriter-cursor1')
+const typewriter_cursor2=document.querySelector('.typewriter-cursor2')
+const condition=document.querySelector('.condition')
 export default function render(obj)
 {
-    header_text.innerHTML=`Right now in `
-    
-    
+    typeWriter(`${obj.cityName},${obj.country}`,cityname,typewriter_cursor1)    
+    typeWriter(obj.condition,condition,typewriter_cursor2)    
     
     
     

@@ -89,3 +89,46 @@ input
     height:25%;
 }
 
+/*You have to make the position relative for offsetWidth
+left =... to work  */
+
+/* For the blinking animation effect */
+.typewriter-cursor
+{
+    display:inline-block;
+    animation:blink 1s infinite;
+    font-size:x-large;
+    color:black;
+}
+@keyframes blink 
+{
+    50%{
+        opacity:0;
+    }
+}
+.typewriter-cursor1
+{
+    position:relative;
+}
+.typewriter-cursor2
+{
+    position:relative;
+}
+
+p
+{
+    color:grey;
+}
+.cityname
+{
+    color:black;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+.condition
+{
+    text-decoration:dotted;
+}
+
+

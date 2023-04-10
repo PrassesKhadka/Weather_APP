@@ -6,9 +6,9 @@ export default async function getWeather() {
             mode: 'cors'
         });
         const json = await response.json();
-        const {current: { temp_c: celsius, temp_f: fahrenheit }, location: { name:cityName,localtime: time } } = json;
+        const {current: { condition:{text:condition},temp_c: celsius, temp_f: fahrenheit }, location: { name:cityName,country:country,localtime: time } } = json;
         console.log(json)
-        const weatherData = { cityName, celsius, fahrenheit, time };
+        const weatherData = { cityName,country, celsius, fahrenheit, time ,condition};
         console.log(weatherData)
         return weatherData;
     }catch (error) {
